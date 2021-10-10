@@ -1,0 +1,65 @@
+{
+  "name": "@stowprotocol/stow-smart-contracts",
+  "version": "0.1.9",
+  "description": "Stow Smart Contracts",
+  "main": "truffle-config.js",
+  "files": [
+    "build",
+    "contracts"
+  ],
+  "scripts": {
+    "start": "npm run start:testrpc",
+    "start:testrpc": "ganache-cli -p 7545 -i 5777 -a 61 -m 'drastic outer student holiday hour ordinary reduce absurd clever govern ensure merry keen sound mountain'",
+    "migrate": "truffle migrate",
+    "migrate:dev": "truffle migrate --reset && node testData/index.js",
+    "migrate:ropsten": "truffle migrate --network ropsten && node testData/index.js",
+    "test": "truffle test",
+    "lint:sol": "solium -d contracts",
+    "coverage": "solidity-coverage",
+    "lint:tests": "eslint test --format junit -o reports/junit/js-lint-results.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsenSys/Stow-Smart-Contracts.git"
+  },
+  "keywords": [
+    "Stow",
+    "Ethereum",
+    "Smart Contracts",
+    "Solidity"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ConsenSys/Stow-Smart-Contracts/issues"
+  },
+  "homepage": "https://stow-protocol.com",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^2.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "ethereumjs-util": "5.2.0",
+    "ganache-cli": "^6.0.3",
+    "multihashes": "^0.4.13",
+    "solidity-coverage": "0.5.2",
+    "solium": "1.1.8",
+    "truffle": "4.1.11"
+  },
+  "dependencies": {
+    "@linniaprotocol/linnia-js": "^0.3.0",
+    "dotenv": "^6.0.0",
+    "ipfs-mini": "^1.1.2",
+    "openzeppelin-solidity": "1.10.0",
+    "truffle-hdwallet-provider": "git+https://github.com/vrotmanh/truffle-hdwallet-provider",
+    "truffle-hdwallet-provider-privkey": "^0.2.0",
+    "web3": "^1.0.0-beta.34"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "extends": "solium:all",
+  "plugins": [
+    "security"
+  ],
+  "rules": {
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "indentation": [
+      "error",
+      4
+    ],
+    "arg-overflow": [
+      "off"
+    ],
+    "no-constant": [
+      "error"
+    ],
+    "security/enforce-explicit-visibility": [
+      "error"
+    ],
+    "security/no-block-members": [
+      "warning"
+    ],
+    "security/no-inline-assembly": [
+      "warning"
+    ]
+  }
+}
